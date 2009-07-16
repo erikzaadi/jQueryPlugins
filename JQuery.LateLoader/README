@@ -1,0 +1,10 @@
+jQuery Late Loader
+
+Enables late loading of javascript/css files.
+
+Created especially for the scenario of having multiple dynamic controls on a page that may need the same resources.
+See the sample for more details..
+
+Includes error handling for missing files.
+
+Currently lacking support for recognizing errors in remote (not from the same domain) css files for non IE browsers.

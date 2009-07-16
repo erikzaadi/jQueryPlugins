@@ -1,0 +1,6 @@
+jQuery Print Element
+
+Sends an element to print.
+
+Inspired by PrintArea (http://plugins.jquery.com/project/PrintArea) and
+http://stackoverflow.com/questions/472951/how-do-i-print-an-iframe-from-javascript-in-safari-chrome
