@@ -1,0 +1,11 @@
+.Fuchsia
+{
+    background-color: Fuchsia !important;
+}
+
+hr
+{
+    color: #f00;
+    background-color: #f00;
+    height: 5px;
+}
