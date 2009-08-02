@@ -6,9 +6,9 @@
 *  Inspired by http://drnicjavascript.rubyforge.org/github_badge and
 *   http://mattn.github.com/jquery-github-badge/
 *
-*  Home Page : http://erikzaadi.github.com/jQueryPlugins/jQueryGitHubBadge
+*  Home Page : http://erikzaadi.github.com/jQueryPlugins/jQuery.GitHubBadge
 *  jQuery Plugin home page : http://plugins.jquery.com/project/GitHubBadge
-*  Wiki : http://wiki.github.com/erikzaadi/jQueryPlugins/jQueryGitHubBadge
+*  Wiki : http://wiki.github.com/erikzaadi/jQueryPlugins/jQuery.GitHubBadge
 * 
 * Dual licensed under the MIT and GPL licenses:
 *   http://www.opensource.org/licenses/mit-license.php
