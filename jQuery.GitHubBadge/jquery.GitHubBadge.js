@@ -8,7 +8,7 @@
 *
 *  Home Page : http://erikzaadi.github.com/jQueryPlugins/jQuery.GitHubBadge
 *  jQuery Plugin home page : http://plugins.jquery.com/project/GitHubBadge
-*  Wiki : http://wiki.github.com/erikzaadi/jQueryPlugins/jQuery.GitHubBadge
+*  Wiki : http://wiki.github.com/erikzaadi/jQueryPlugins/jquerygithubbadge
 * 
 * Dual licensed under the MIT and GPL licenses:
 *   http://www.opensource.org/licenses/mit-license.php
