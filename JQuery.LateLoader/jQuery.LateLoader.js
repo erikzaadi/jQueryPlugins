@@ -1,3 +1,15 @@
+/*
+* jQuery Late Loader
+*
+* Copyright (c) 2009 Erik Zaadi
+*
+* Plugin home page : http://plugins.jquery.com/project/TODO! 
+* Wiki : http://wiki.github.com/erikzaadi/jQueryPlugins/jquerylateloader
+* 
+* Dual licensed under the MIT and GPL licenses:
+*   http://www.opensource.org/licenses/mit-license.php
+*   http://www.gnu.org/licenses/gpl.html
+*/
 ; (function($) {
     $.LateLoader = {
         LoadScriptOrCSS: _LoadScriptOrCSS,
@@ -121,8 +133,9 @@
         if (!$createdLink.length) {
             success = false;
         }
-        if ($.browser.msie) {
-            success = $createdLink.get(0).readyState == "complete";
+        if ($createdLink.get(0).readyState) {
+			var created = $createdLink.get(0).readyState;
+            success = created == "complete" || created == "loaded";
         } else {
             if (false /*Need to find a non IE solution to validate if the external stylesheet has loaded*/) {
                 success = false;

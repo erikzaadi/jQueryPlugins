@@ -6,8 +6,9 @@
 * Inspired by PrintArea (http://plugins.jquery.com/project/PrintArea) and
 * http://stackoverflow.com/questions/472951/how-do-i-print-an-iframe-from-javascript-in-safari-chrome
 *
-* $Id: jquery.printElement.js PENDING ID ErikZ $
-*
+*  Plugin home page : http://plugins.jquery.com/project/printElement 
+* Wiki : http://wiki.github.com/erikzaadi/jQueryPlugins/jqueryprintelement 
+* 
 * Dual licensed under the MIT and GPL licenses:
 *   http://www.opensource.org/licenses/mit-license.php
 *   http://www.gnu.org/licenses/gpl.html
