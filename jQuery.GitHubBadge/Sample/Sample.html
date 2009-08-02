@@ -6,8 +6,6 @@
 
     <script type="text/javascript" src="../jquery.GitHubBadge.min.js"></script>
 
-    <link rel="Stylesheet" type="text/css" href="sample.css" />
-
     <script type="text/javascript">
         $(document).ready(function() {
             $("#GetGithHubBadge").click(function() {
@@ -18,7 +16,41 @@
             });
         });
     </script>
+	<style type="text/css">
+	.GithubBadge
+	{
+	    border-left: 1px solid #DFDFDF;
+		border-top: 1px solid #DFDFDF;
+		border-right: 1px solid #AFAFAF;
+		border-bottom: 1px solid #AFAFAF;
+		-webkit-border-radius:3px;
+		-moz-border-radius:3px;
+		border-radius:3px; 
+		background-color : #F6F6F6;
+		padding : 5px;
+	}
 
+	.GithubBadgeTitle
+	{
+		font-weight:bold;
+	}
+
+	.GithubBadgeRepo
+	{
+	    background : url('http://github.com/images/icons/public.png') no-repeat left center;
+		padding-left : 22px;
+	}
+
+	.GithubBadgeFork
+	{
+	    font-style : italic;
+	}
+
+	.GithubBadgeError
+	{
+		color:red;
+	}
+	</style>
 </head>
 <body>
     <h2>
