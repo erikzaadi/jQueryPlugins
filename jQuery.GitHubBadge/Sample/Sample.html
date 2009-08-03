@@ -4,8 +4,8 @@
 <title>Erik Zaadi @ GitHub -> jQuery Plugins -> jQuery GitHub Badge 1.0 -> Sample Page</title>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-
-    <script type="text/javascript" src="../jquery.GitHubBadge.min.js"></script>
+	<script type="text/javascript" src="../../../chili/jquery.chili-2.2.js"></script>
+	<script type="text/javascript" src="../jquery.GitHubBadge.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -59,9 +59,9 @@
 	<div>
 		<h3>Usage :</h3>
 		<h4>Simple Usage : </h4>
-		<pre><code>$('Selector').GitHubBadge('usernamestring');</code></pre>
+		<pre><code class="js">$('Selector').GitHubBadge('usernamestring');</code></pre>
 		<h4>Advanced Usage : </h4>
-		<pre><code>$('Selector').GitHubBadge({ 
+		<pre><code class="js">$('Selector').GitHubBadge({ 
 				user: 'usernamestring', // Mandatory (Duh!)
 				showErrors: true, //Display error messages (default:false)
 				showForks: true, //Shows not only personal public repositories, but forks as well (default:true)
