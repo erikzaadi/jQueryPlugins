@@ -4,10 +4,8 @@ title: jQuery GitHub Badge 1.0 Sample Page
 areaname: jQuery Plugins 
 arealink: jQueryPlugins 
 link: jQueryPlugins/jQuery.GitHubBadge/Sample
----
-
-<script type="text/javascript">
-    $(document).ready(function() {
+docReady: |
+   $(document).ready(function() {
         $("#GetGithHubBadgeAdvancedUsage").click(function() {
             $('#toBadge').GitHubBadge({ user: $("#GithHubUser").val(), showErrors: true, validateUser: true });
         });
@@ -15,7 +13,7 @@ link: jQueryPlugins/jQuery.GitHubBadge/Sample
             $('#toBadge').GitHubBadge($("#GithHubUser").val());
         });
     });
-    </script>
+---
 
 <style type="text/css">
     .GithubBadge
@@ -63,18 +61,26 @@ link: jQueryPlugins/jQuery.GitHubBadge/Sample
         <h4>
             Advanced Usage :
         </h4>
-        <pre class="span-12"><code class="js">$('Selector').GitHubBadge({ user: 'usernamestring',
-            // Mandatory (Duh!) showErrors: true, //Display error messages (default:false) showForks:
-            true, //Shows not only personal public repositories, but forks as well (default:true)
-            validateUser: true //Validates that user exists (404 can not be detecteted, due
-            to JSONP..), NOTE: Generates an extra request (default:false) });</code></pre>
+        <pre class="span-12"><code class="js">$('Selector').GitHubBadge({ 
+			user: 'usernamestring',
+            // 		Mandatory (Duh!) 
+			showErrors: true,
+			//		Display error messages (default:false) 
+			showForks: true, 
+			//		Shows not only personal public repositories, but forks as well (default:true)
+            validateUser: true 
+			//		Validates that user exists 
+			//		404 can not be detected, due to JSONP..
+			//		NOTE: Generates an extra request (default:false) 
+			});</code></pre>
     </div>
-    <div class="span-17 last>
+    <div class="span-17 last">
         <label>
             Enter User<input type="text" id="GithHubUser" /></label>
         <input type="button" value="Advanced Usage " id="GetGithHubBadgeAdvancedUsage" />
         <input type="button" value="Simple Usage" id="GetGithHubBadgeSimpleUsage" />
-        <hr />
+	</div>
+	<div class="span-17 last">
         <div id="toBadge" style="width: 350px;">
             This is where the badge will be.<br />
             Typical usage : loading image/text...</div>
