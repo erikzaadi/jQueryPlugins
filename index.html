@@ -11,11 +11,11 @@ title: jQuery Plugins Home
 <div class="span-17 last">
 		<h2>Plugin Pages :</h2>
 		<dl>
-		{% for plugin in site.plugin %}
+		{% for plugin in site.plugins %}
 			{% if plugin.active == false %}
 			<!--
 			{% endif %}
-			<dt><h3><a href="{{ plugin.link }}" alt="{{ plugin.name }}">{{ plugin.name }}</a></h3></dt>
+			<dt><h3><a href="/jQueryPlugins{{ plugin.link }}" alt="{{ plugin.name }}">{{ plugin.name }}</a></h3></dt>
 			<dd>{{ plugin.description }}</dd>
 			{% if plugin.active == false %}
 			-->
