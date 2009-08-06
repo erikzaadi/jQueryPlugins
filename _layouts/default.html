@@ -8,7 +8,7 @@
     <meta name="rating" content="general" /> 
     <meta name="robots" content="all" /> 
     <meta name="MSSmartTagsPreventParsing" content="true" /> 
-    <link href="http://feeds2.feedburner.com/Znag" rel="alternate" title="Erik Zaadi"
+    <link href="http://erikzaadi.github.com/atom.xml" rel="alternate" title="Erik Zaadi @ Github"
         type="application/atom+xml" />
     <link media="all" rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/dark-hive/jquery-ui.css" />
     <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
@@ -30,10 +30,14 @@
                 <div class="span-19 last">
                     <ul class="BreadCrumbs">
                         <li><a href="/">Home</a> </li>
-                        <li><span>::</span></li>
+                       {% if page.areaname %}
+						<li><span>::</span></li>
                         <li><a href="{{ page.arealink }}">{{ page.areaname}} </a></li>
+						{% endif %}
+						{% if page.link %}
                         <li><span>::</span></li>
                         <li><a href="{{ page.link }}">{{ page.title}} </a></li>
+						{% endif %}
                     </ul>
                 </div>
                 <div class="span-17 prepend-1 append-1 last">
@@ -46,9 +50,14 @@
                     &nbsp;
                 </div>
             </div>
-            <div id="GithubBadge" class="span-5 last ui-widget-container">
-                Loading..
-            </div>
+			<div class="span-5 last" id="sidebar">
+	            <div id="GithubBadge" class="span-5 last ui-widget-container">
+	                Loading..
+	            </div>
+				<div class="span-5 last">
+					<div id="dsq-recentcomments" class="dsq-widget"><h2 class="dsq-widget-title">Recent Comments</h2><script type="text/javascript" src="http://disqus.com/forums/erikzaadigithub/recent_comments_widget.js?num_items=5&avatar_size=32"></script></div><a href="http://disqus.com">Powered by Disqus</a>
+				</div>
+			</div>
         </div>
         <div class="ui-widget span-24 last ui-widget-header ui-corner-bottom">
             <div class="span-24 last">
@@ -70,12 +79,16 @@
                         <img alt='Blog' src='/images/blog.JPG' class="centered" title='Blog' />
                     </a>
                 </div>
-                <div class='span-6 centered'>
-                    <a href='http://feeds2.feedburner.com/Znag' rel='alternate' title='Subscribe to my feed'
+                <div class='span-6 centered'>                
+					<a href='http://erikzaadi.github.com/atom.xml' rel="alternate" title="Suscribe">
+                        <img alt='RSS' src='/images/rss.pngs' class="centered" title='RSS' />
+                    </a>
+				  <!-- <a href='http://feeds2.feedburner.com/Znag' rel='alternate' title='Subscribe to my feed'
                         type='application/rss+xml'>
                         <img alt='' height='26' src='http://feeds2.feedburner.com/~fc/Znag?bg=99CCFF&amp;fg=444444&amp;anim=0'
                             style='border: 0; margin-left: 30px;' width='88' />
                     </a>
+					-->
                 </div>
                 <div class='span-4 last centered'>
                     <div class='span-4 prepend-1 last centered'>
@@ -103,11 +116,11 @@
     <script type="text/javascript" src="/jQueryPlugins/scripts/jquery.GitHubBadge.min.js"></script>
 
     <script type="text/javascript" src="/scripts/main.js"></script>
-
+	{% if page.docReady }
 	<script type="text/javascript">
 	{{ page.docReady }}
 	</script>
-
+	{% endif %}
 	<script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
         document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

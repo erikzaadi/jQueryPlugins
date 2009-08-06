@@ -1,0 +1,21 @@
+---
+layout: default
+areaname: Posts
+arealink: /posts.html
+---
+
+<div id="post" class="span-17 last">
+	<div class="span-17 last">
+  <h2 id="posttitle"><a href="{{ page.url }}">
+    {{ page.title }}
+  </a></h2>
+  </div>
+  <div class="span-17 last">
+	<div id="date">published {{ page.date | date_to_string }}</div>
+  </div>
+  <div class="span-17 last postcontent">
+  {{ content }}
+  </div>
+    <hr />
+	<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/erikzaadigithub/embed.js"></script><noscript><a href="http://erikzaadigithub.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>

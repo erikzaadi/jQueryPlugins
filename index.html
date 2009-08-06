@@ -7,7 +7,19 @@ title: jQuery Plugins Home
 ---
 <div class="span-17 last">
 	<h2>jQuery Plugins</h2>
-
-	<h3>Working on getting this site up..</h3>
-	<div><a href="/jQueryPlugins/jQuery.GitHubBadge">jQuery.GitHubBadge</a></div>
+</div>
+<div class="span-17 last">
+		<h2>Plugin Pages :</h2>
+		<dl>
+		{% for plugin in site.plugin %}
+			{% if plugin.active == false %}
+			<!--
+			{% endif %}
+			<dt><h3><a href="{{ plugin.link }}" alt="{{ plugin.name }}">{{ plugin.name }}</a></h3></dt>
+			<dd>{{ plugin.description }}</dd>
+			{% if plugin.active == false %}
+			-->
+			{% endif %}
+		{% endfor %}
+		</dl>
 </div>
