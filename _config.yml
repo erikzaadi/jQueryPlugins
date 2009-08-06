@@ -1,9 +1,9 @@
 plugins: 
-	- name : 'jQuery GitHub Badge'
-	  link : '/jQuery.GitHubBadge'
-	  active : true
-	  description : 'Shows a badge with your public repositories at github'
-	- name : 'jQuery.printElement'
-	  link : '/jQuery.printElement'
-	  active : false
-	  description : 'Sends an element to print.'	
+ - name : 'jQuery GitHub Badge'
+   link : '/jQuery.GitHubBadge'  
+   active : true
+   description : 'Shows a badge with your public repositories at github'
+ - name : 'jQuery.printElement'
+   link : '/jQuery.printElement'
+   active : false
+   description : 'Sends an element to print.'
