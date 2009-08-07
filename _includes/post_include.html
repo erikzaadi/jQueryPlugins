@@ -1,0 +1,12 @@
+<div class="span-17 last ui-widget ui-corners-all">
+    <div class="span-17 ui-widget-header ui-corner-top last padmeten">
+        <h4>
+            <a href="{{ post.url }}" alt="Post">{{ post.title }}</a></h4>
+    </div>
+    <div class="span-17 ui-widget-content last padmeten">
+        {{ post.content }}
+    </div>
+    <div class="span-17 ui-widget-header ui-corner-bottom last padmeten">
+        <em>Posted at {{ post.date | date_to_string }}</em>
+    </div>
+</div>

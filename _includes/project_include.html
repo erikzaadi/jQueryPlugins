@@ -1,0 +1,26 @@
+<div class="ui-widget project span-17 last">
+	<div class="ui-widget-header ui-corner-top span-17 last padmeten">
+		<h4><a href="{{ project.link }}" alt="{{ project.name }}">{{ project.name }}</a></h4>
+	</div>
+	<div class="ui-widget-content span-17 last padmeten">
+		<dl>	
+			<dd>
+				<dl>
+					<dt>Description :</dt>
+					<dd>{{ project.description }}</dd>
+				</dl>
+			</dd>
+			<dd>Language : {{ project.language }}</dd>
+			<dd>Platform : {{ project.platform }}</dd>
+		</dl>
+	</div>
+	<div class="ui-widget-header span-17 last padmeten">
+		<div>
+			<em>Created : {{ project.created }}</em>
+		</div>
+		<div>
+			<em>Last Modified : {{ project.modified }}</em>
+		</div>
+
+	</div>
+</div>
