@@ -1,0 +1,8 @@
+---
+layout: nil
+---
+http://erikzaadi.github.com/jQueryPlugins/
+http://erikzaadi.github.com/jQueryPlugins/posts.html
+http://erikzaadi.github.com/jQueryPlugins/plugins.html{% for post in site.posts %}
+http://erikzaadi.github.com/jQueryPlugins/{{ post.url }}{% endfor %}{% for plugin in site.plugins %}
+http://erikzaadi.github.com/jQueryPlugins/{{ plugin.link }}{% endfor %}

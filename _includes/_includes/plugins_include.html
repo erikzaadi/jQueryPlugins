@@ -1,0 +1,17 @@
+{% if site.plugins.size > 0 %}
+    <div class="accordionme">
+        {% for plugin in site.plugins %}
+	        {% include plugin_include.html %}
+        {% endfor %}
+    </div>
+    <div>&nbsp;</div>
+    {% if page.link == '/plugins.html' %}
+    <div>&nbsp;</div>
+    {% else %}    
+    <div>
+        <a href="/plugins.html" alt="All Plugins">All plugins ({{ site.plugins.size }})</a>
+    </div>
+    {% endif %}
+{% else %}
+    <div class="notice">No plugins submitted yet..</div>
+{% endif %}

@@ -1,0 +1,17 @@
+{% if site.posts.size > 0 %}
+    <div class="accordionme">
+        {% for post in site.posts %}
+	        {% include post_include.html %}
+        {% endfor %}
+    </div>
+    <div>&nbsp;</div>
+   {% if page.link == '/posts.html' %}
+    <div>&nbsp;</div>
+    {% else %}    
+    <div>
+        <a href="/posts.html" alt="All Posts">All Posts ({{ site.posts.size }})</a>
+    </div>
+    {% endif %}
+{% else %}
+    <div class="notice">No posts submitted yet..</div>
+{% endif %}

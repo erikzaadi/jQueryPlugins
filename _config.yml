@@ -1,9 +1,28 @@
+#Reset when committing!
+usegoogleanalytics : true
+#Reset when committing!
+localmode : false
 plugins: 
- - name : 'jQuery GitHub Badge'
-   link : '/jQuery.GitHubBadge'  
-   active : true
-   description : 'Shows a badge with your public repositories at github'
- - name : 'jQuery.printElement'
-   link : '/jQuery.printElement'
-   active : false
-   description : 'Sends an element to print.'
+  - name : 'jQuery.GitHubBadge'
+    link : '/jQuery.GitHubBadge'
+    description : 'Adds a badge listing your GitHub account public repositories'
+    language : 'Javascript'
+    platform : 'Web'
+    modified : 03-05-1999
+    created : 03-05-2009
+#placeholder
+templateforprojects:
+  - name : 'jQuery Plugins1'
+    link : '/jQueryPlugins1'
+    description : 'Collecti1on of jQuery plugins'
+    language : 'Javascript1'
+    platform : 'Web1'
+    modified : 03-08-1999
+    created : 03-05-2009
+  - name : 'jQuery Plugins2'
+    link : '/jQueryPlugins2'
+    description : 'Collecti21on of jQuery plugins'
+    language : 'Javascript12'
+    platform : 'Web12'
+    modified : 03-08-1999
+    created : 03-05-2009

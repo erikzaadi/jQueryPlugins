@@ -1,25 +1,24 @@
----
-layout: default
+--- 
+layout: default 
+title: Erik Zaadi @ GitHub -> Home 
 areaname: jQuery Plugins
-arealink: /jQueryPlugins
-link: /jQueryPlugins
-title: jQuery Plugins Home
+arealink : /jQueryPlugins
 ---
 <div class="span-17 last">
-	<h2>jQuery Plugins</h2>
-</div>
-<div class="span-17 last">
-		<h2>Plugin Pages :</h2>
-		<dl>
-		{% for plugin in site.plugins %}
-			{% if plugin.active == false %}
-			<!--
-			{% endif %}
-			<dt><h3><a href="/jQueryPlugins{{ plugin.link }}" alt="{{ plugin.name }}">{{ plugin.name }}</a></h3></dt>
-			<dd>{{ plugin.description }}</dd>
-			{% if plugin.active == false %}
-			-->
-			{% endif %}
-		{% endfor %}
-		</dl>
+    <div class="span-17 last">
+        <div class="span-17 last">
+            <h3>
+                <a href="plugins.html">Plugin Pages</a> :</h3>
+        </div>
+        <div class="span-17 last">
+            {% include plugins_include.html %}
+        </div>
+    </div>
+    <div class="span-17 last">
+        &nbsp;</div>
+    <div class="span-17 last">
+        <h3>
+            <a href="posts.html" alt="Posts">Posts</a> :</h3>
+            {% include posts_include.html %}
+    </div>
 </div>
