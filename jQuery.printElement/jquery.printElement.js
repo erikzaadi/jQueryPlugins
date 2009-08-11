@@ -53,20 +53,17 @@
 
         if (opts.printMode.toLowerCase() == 'popup') {
             popupOrIframe = window.open('', 'printElementWindow', 'width=650,height=440,scrollbars=yes');
-            documentToWriteTo = popup.document;
+            documentToWriteTo = popupOrIframe.document;
         }
         else {
             var printElementID = "printElement_" + (Math.random() * 99999).toString();
-            iframe = document.createElement('IFRAME');
-            $(iframe).attr({ style: opts.iframeElementOptions.styleToAdd,
+            popupOrIframe = $('<iframe />').attr({ style: opts.iframeElementOptions.styleToAdd,
                 id: printElementID,
                 className: opts.iframeElementOptions.classNameToAdd
-            });
-            document.body.appendChild(iframe);
-            documentToWriteTo = iframe.contentWindow.document;
-            var iframe = document.frames ? document.frames[printElementID] : document.getElementById(printElementID);
-            popupOrIframe = iframe.contentWindow || iframe;
+            }).appendTo('body')[0].contentWindow;
+            documentToWriteTo = popupOrIframe.document;
         }
+        window.focus();
         documentToWriteTo.open();
         documentToWriteTo.write(html);
         documentToWriteTo.close();
