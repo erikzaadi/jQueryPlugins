@@ -8,8 +8,15 @@ plugins:
     description : 'Adds a badge listing your GitHub account public repositories'
     language : 'Javascript'
     platform : 'Web'
-    modified : 03-05-1999
+    modified : 03-05-2009
     created : 03-05-2009
+  - name : 'jQuery.printElement'
+    link : '/jQuery.printElement'
+    description : 'Sends an element to print, either in a popup or a hidden iframe'
+    language : 'Javascript'
+    platform : 'Web'
+    modified : 28-07-2009
+    created : 28-07-2009
 #placeholder
 templateforprojects:
   - name : 'jQuery Plugins1'

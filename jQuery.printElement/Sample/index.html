@@ -1,0 +1,37 @@
+--- 
+layout: default 
+title: jQuery Print Element 0.9 Sample Page 
+areaname: jQuery Plugins / jQuery Print Element 
+arealink: /jQueryPlugins/jQuery.printElement/
+link: /jQueryPlugins/jQuery.printElement/Sample
+docReady: |
+   $(document).ready(function() {
+            $("#simplePrint").click(function() {
+                printElem({});
+            });
+            $("#PrintinPopup").click(function() {
+                printElem({ printMode: 'popup' });
+            });
+            $("#ChangeTitle").click(function() {
+                printElem({ pageTitle: 'thisWillBeTheNameInThePrintersLog.html' });
+            });
+            $("#PopupandLeaveopen").click(function() {
+                printElem({ leaveOpen: true, printMode: 'popup' });
+            });
+        });
+    function printElem(options){
+        $('#toPrint').printElement(options);
+    }
+scripts :
+ - src : /scripts/jquery.printElement.min.js
+---
+   
+<div class="span-17 last">
+    <input type="button" value="Default" id="simplePrint" />
+    <input type="button" value="Popup" id="PrintinPopup" />
+    <input type="button" value="Change Title" id="ChangeTitle" />
+    <input type="button" value="Popup and Leave open" id="PopupandLeaveopen" />
+    <hr />
+    <div id="toPrint">
+        hmm , need some more printable samples here</div>
+</div>

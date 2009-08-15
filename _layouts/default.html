@@ -154,9 +154,13 @@
 
     <script type="text/javascript" src="/scripts/main.js"></script>
 
+	{% for var script in page.scripts %}
+	 <script type="text/javascript" src="{{script.src}}"></script>
+	{% endfor %}
+
     {% if page.docReady %}
 
-    <script type="text/javascript">        { { page.docReady } } </script>
+    <script type="text/javascript">        {{ page.docReady }} </script>
 
     {% endif %}
     {% if site.usegoogleanalytics %}
