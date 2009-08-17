@@ -10,25 +10,25 @@ layout: nil
     {% for post in site.posts %}
     <url>
         <loc>http://erikzaadi.github.com/jQueryPlugins{{ post.url }}</loc>
-        <lastmod>{{site.time}}</lastmod>
+        <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
     </url>{% endfor %}{% for plugin in site.plugins %}
     <url>
         <loc>http://erikzaadi.github.com/jQueryPlugins{{ plugin.link }}</loc>
-        <lastmod>{{site.time}}</lastmod>
+        <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
     </url>{% endfor %}
     <url>
         <loc>http://erikzaadi.github.com/jQueryPlugins/posts.html</loc>
-        <lastmod>{{site.time}}</lastmod>
+        <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>http://erikzaadi.github.com/jQueryPlugins/projects.html</loc>
-        <lastmod>{{site.time}}</lastmod>
+        <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
     </url>
