@@ -1,0 +1,149 @@
+--- 
+layout: default 
+title: jQuery.LateLoader  Sample Page 
+areaname: jQuery Plugins / jQuery LateLoader  
+arealink: /jQueryPlugins/jQuery.LateLoader/
+link: /jQueryPlugins/jQuery.LateLoader/Sample
+docReady: |
+    function LogToConsole(toLog) {
+            $console = $("#console");
+            $console.val($("#console").val() + "\n" + toLog)
+            $console.get(0).scrollTop = $console.get(0).scrollHeight;
+            return;
+        }
+
+        $(document).ready(function() {
+            $("#testButton").click(function() {
+                $.LateLoader.LoadScriptOrCSS({
+                    URL: $("#url").val(),
+                    Type: $("#type").val(),
+                    LoadedCallBackFunction: function(url) {
+                        LogToConsole('Loaded - ' + url);
+                    },
+                    ErrorCallBackFunction: function(data) { LogToConsole('error loading ' + data); }
+                });
+            });
+            $("#hasButton").click(function() {
+                LogToConsole($.LateLoader.IsScriptOrCSSLoaded($("#url").val(), $("#type").val()));
+            });
+            $("#data").click(function() {
+                var scripts = $.LateLoader.GetLoadedScriptOrCSSs();
+                for (var script in scripts['js'])
+                    LogToConsole('Script -> ' + scripts['js'][script]);
+                for (var css in scripts['css'])
+                    LogToConsole('StyleSheet -> ' + scripts['css'][css]);
+            });
+            $("#TestLocalJS").click(function() {
+                $.LateLoader.LoadScriptOrCSS({
+                    URL: '/jQueryPlugins/jQuery.LateLoader/Sample/sample.js',
+                    LoadedCallBackFunction: function() {
+                        LogToConsole('Local Script Loaded...');
+                    }
+                });
+            });
+            $("#testRemoteJS").click(function() {
+                $.LateLoader.LoadScriptOrCSS({
+                    URL: 'http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js',
+                    LoadedCallBackFunction: function() {
+                        LogToConsole("Just loaded SWF object from the Google CDN:");
+                        LogToConsole("swfobject.ua.pv[0] -> " + swfobject.ua.pv[0]);
+                    }
+                });
+            });
+            $("#testRemoteCSS").click(function() {
+                $.LateLoader.LoadScriptOrCSS({
+                    URL: 'http://assets3.github.com/stylesheets/bundle.css?180c214baeba2d8a1194e7b48ea7581cfee3e505',
+                    Type: 'css', LoadedCallBackFunction: function() {
+                        LogToConsole('Loaded a css from Github..');
+                    }
+                });
+            });
+            $("#testLocalCSS").click(function() {
+                $.LateLoader.LoadScriptOrCSS({
+                    URL: '/jQueryPlugins/jQuery.LateLoader/Sample/sample.css',
+                    Type: 'css',
+                    LoadedCallBackFunction: function() {
+                        LogToConsole('Local CSS Loaded.. Check out the background color!');
+                    }
+                });
+            });
+            $("#TestErrorLocalJS").click(function() {
+                $.LateLoader.LoadScriptOrCSS({
+                    URL: 'jquery-ui.min.js',
+                    LoadedCallBackFunction: function() {
+                        LogToConsole("You shouldn't get here! This is the success method!");
+                    },
+                    ErrorCallBackFunction: function(data) { LogToConsole('error loading ' + data); }
+                });
+            });
+            $("#TestErrorRemoteJS").click(function() {
+                $.LateLoader.LoadScriptOrCSS({
+                    URL: 'http://ajax.googleapis.com/ajax/libs/jqujquery-ui.min.js',
+                    LoadedCallBackFunction: function() {
+                        LogToConsole("You shouldn't get here! This is the success method!");
+                    },
+                    ErrorCallBackFunction: function(data) { LogToConsole('error loading ' + data); }
+                });
+            });
+            $("#TestErrorRemoteCSS").click(function() {
+                $.LateLoader.LoadScriptOrCSS({
+                    URL: 'http://ajax.googleapis.com/themes/redmond/jquery-ui.css',
+                    Type: 'css',
+                    LoadedCallBackFunction: function() {
+                        LogToConsole("You shouldn't get here! This is the success method!");
+                    },
+                    ErrorCallBackFunction: function(data) { LogToConsole('error loading ' + data); }
+                });
+            });
+            $("#TestErrorLocalCSS").click(function() {
+                $.LateLoader.LoadScriptOrCSS({
+                    URL: 'test1.css',
+                    Type: 'css',
+                    LoadedCallBackFunction: function() {
+                        LogToConsole("You shouldn't get here! This is the success method!");
+                    },
+                    ErrorCallBackFunction: function(data) { LogToConsole('error loading ' + data); }
+                });
+            });
+        });
+scripts :
+ - src : /scripts/jQuery.LateLoader.min.js
+---
+<div>
+	<fieldset>
+		<legend>Try with your own css/script</legend>
+		<div>
+		<label>
+			URL<input type="text" value="" id="url" name="url" /></label>
+		<label>
+			Type<select id="type" name="type" >
+				<option value="js" selected="selected">Javascript</option>
+				<option value="css">Style Sheet</option>
+			</select></label>
+		<input type="button" value="Load" id="testButton"  class="ui-state-default" />
+		<input type="button" value="Existing?" id="hasButton" class="ui-state-default" />
+		<input type="button" value="Get Loaded Data" id="data" class="ui-state-default" />
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Typical use cases</legend>
+		<div>Javascript</div>
+		<div>
+			<input type="button" value="Remote" id="testRemoteJS"  class="ui-state-default" />
+			<input type="button" value="Local" id="TestLocalJS"  class="ui-state-default" />
+			<input type="button" value="Error from Local" id="TestErrorLocalJS"  class="ui-state-default" />
+			<input type="button" value="Error from Remote" id="TestErrorRemoteJS"  class="ui-state-default" />
+		</div>
+		<div>CSS</div>
+		<div>
+			<input type="button" value="Remote" id="testRemoteCSS"  class="ui-state-default"  />
+			<input type="button" value="Local" id="testLocalCSS"  class="ui-state-default" />
+			<input type="button" value="Error from Local" id="TestErrorLocalCSS"  class="ui-state-default"/>
+			<input type="button" value="Error from Remote" id="TestErrorRemoteCSS"  class="ui-state-default" />
+		</div>
+    </fieldset>
+	<fieldset>
+		<legend class="Fuchsia">Console</legend>
+		<textarea id="console" style="width: 100%; height: 300px; overflow: auto;"></textarea>
+	</fieldset>
+</div>

@@ -1,0 +1,80 @@
+--- 
+layout: default  
+title: jQuery.LateLoader 
+areaname: jQuery Plugins  
+arealink: /jQueryPlugins 
+link: /jQueryPlugins/jQuery.LateLoader 
+---
+<div class="span-17 last">
+    <h2>jQuery.LateLoader </h2>
+    <h4><a href="Sample/">Sample</a></h4>
+    <h4><a href="/jQueryPlugins/scripts/jQuery.LateLoader.js">Download</a></h4>
+    <h4><a href="/jQueryPlugins/scripts/jQuery.LateLoader.min.js">Download (Minified)</a></h4>
+    <div>
+        Copyright (c) 2009 Erik Zaadi
+    </div>
+    <div>&nbsp;</div>
+	
+	<h3>Late loading of javascripts and css files</h3>
+	<div>
+        &nbsp; <a href="http://erikzaadi.github.com/jQueryPlugins/jQuery.LateLoader " target="_blank">HomePage</a>
+       <!-- Not uploaded yet.. Are you peeking at my source? :D &nbsp; <a href="http://plugins.jquery.com/project/jQuery.LateLoader" target="_blank">jQuery Plugin home page</a>-->
+        &nbsp; <a href="http://wiki.github.com/erikzaadi/jQueryPlugins/jquerylateloader" target="_blank">Wiki</a>
+            &nbsp; <a href="http://github.com/erikzaadi/jQueryPlugins/tree/master" target="_blank">Fork the Project</a>
+			    &nbsp; 
+    </div>
+    <div>
+        Dual licensed under the MIT and GPL licenses: http://www.opensource.org/licenses/mit-license.php
+        http://www.gnu.org/licenses/gpl.html
+    </div>
+    <div>
+		<h4>Usage</h4>
+	</div>
+	<div>
+		<pre><code class="js">
+$.LateLoader = 
+    {
+        LoadScriptOrCSS: 
+        /*
+        Loads a javascript/css from the passed url if it wasn't previously loaded
+         
+        The parameter can either be a string with the wanted url( then the default
+        params are used (See Defaults for more details)), or an option object 
+        URL -> relative or absolute URL to your javascript/css 
+        */
+        IsScriptOrCSSLoaded:
+        /*
+        Returns true|false if a javascript/css is already loaded (via LoadScriptOrCSS)
+        
+        Parameters : 
+        URL-> relative or absolute URL to your javascript/css 
+        Type->'js' or 'css' (defaults to 'js')
+        */
+        GetLoadedScriptOrCSSs: 
+        /*
+        Returns an array of all loaded scripts (object with 2 arrays, css and js)
+        */
+        GetLoadedScriptOrCSSsByType:
+        /*
+        Returns an array of all loaded scripts/css according to the passed type
+        
+        Parameter : 
+        Type->'js' or 'css' 
+        */
+        PluginDefaults:
+        {
+            ArrayDataKey: "LateLoaderDataKey", //Unique key used to identify the jQuery Data collection
+            ElementToAttachDataTo: "body", //DOM object that hosts the jQuery Data collection
+            RemoteTimeout: 1500 //MS of timeout to wait for a remote script..
+        },
+        Defaults:
+            {
+                URL: null, //Will be filled in by LoadScriptOrCSS's parameter
+                Type: 'js', // 'js' or 'css' (defaults to 'js')
+                LoadedCallBackFunction: null, // Called when the javascript/css is loaded (default is null)
+                ErrorCallBackFunction: null// Called when an error occurs (default is null)
+            }
+    }
+		</code></pre>
+	</div>
+</div>
