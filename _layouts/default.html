@@ -1,52 +1,65 @@
 <html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>{{ page.title }}</title>
-    <meta name="author" content="Erik Zaadi" />
-    <meta name="keywords" content="jquery,aspnetmvc,c#,plugins,programming,web,web dev,utilities,git,github,open source" />
-    <meta name="distribution" content="all" />
-    <meta name="rating" content="general" />
-    <meta name="robots" content="all" />
-    <meta name="MSSmartTagsPreventParsing" content="true" />
-    <link href="http://erikzaadi.github.com/atom.xml" rel="alternate" title="Erik Zaadi @ Github"
-        type="application/atom+xml" />
-    {% if site.localmode %}
-    <link media="all" rel="stylesheet" type="text/css" href="/css/jquery-ui.css" />
-    {% else %}        
-    <link media="all" rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/dark-hive/jquery-ui.css" />
-    {% endif %}
-    <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
-    <link rel="stylesheet" href="/css/main.css" type="text/css" media="all" />
-    <!--[if IE]><link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen, projection"/><![endif]-->
-</head>
-<body>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>{{ page.title }}</title>
+        <meta name="author" content="Erik Zaadi" />
+        <meta name="keywords" content="jquery,aspnetmvc,c#,plugins,programming,web,web dev,utilities,git,github,open source" />
+        <meta name="distribution" content="all" />
+        <meta name="rating" content="general" />
+        <meta name="robots" content="all" />
+        <meta name="MSSmartTagsPreventParsing" content="true" />
+        <link href="http://erikzaadi.github.com/atom.xml" rel="alternate" title="Erik Zaadi @ Github" type="application/atom+xml" />
+        {% if site.localmode %}
+        <link media="all" rel="stylesheet" type="text/css" href="/css/jquery-ui.css" />
+        {% else %} 
+        <link media="all" rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/dark-hive/jquery-ui.css" />
+        {% endif %}
+        <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
+        <link rel="stylesheet" href="/css/main.css" type="text/css" media="all" />
+        <!--[if IE]><link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen, projection"/><![endif]-->
+        <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="all" />
+    </head>
+    <body>
     <div class="container ui-widget-content">
         <div class="span-24 last ui-widget ui-corner-all">
             <div class="span-24 last ui-widget-header ui-corner-top">
                 <div>
-                    &nbsp;</div>
-                <h1 class="centered">
-                    <a href="/">Erik Zaadi @ GitHub</a>
-                </h1>
+                    &nbsp;
+                </div>
+                <h1 class="centered"><a href="/">Erik Zaadi @ GitHub</a></h1>
             </div>
             <div class="span-24 last">
                 <div class="span-19">
                     <div class="span-19 last">
-                        &nbsp;</div>
+                        &nbsp;
+                    </div>
                     <div class="span-19 last">
                         <ul class="BreadCrumbs">
-                            <li><a class="ui-state-default" href="/">Home</a> </li>
+                            <li>
+                                <a class="ui-state-default" href="/">Home</a>
+                            </li>
                             {% if page.areaname %}
-                            <li><span>&nbsp;::&nbsp;</span></li>
-                            <li><a class="ui-state-default" href="{{ page.arealink }}">{{ page.areaname}} </a>
+                            <li>
+                                <span>&nbsp;::&nbsp;</span>
+                            </li>
+                            <li>
+                                <a class="ui-state-default" href="{{ page.arealink }}">{{ page.areaname}} </a>
                             </li>
                             {% endif %} {% if page.link %}
-                            <li><span>&nbsp;::&nbsp;</span></li>
-                            <li><a class="ui-state-default" href="{{ page.link }}">{{ page.title}} </a></li>
+                            <li>
+                                <span>&nbsp;::&nbsp;</span>
+                            </li>
+                            <li>
+                                <a class="ui-state-default" href="{{ page.link }}">{{ page.title}} </a>
+                            </li>
                             {% endif %} {% if page.url %}
-                            <li><span>&nbsp;::&nbsp;</span></li>
-                            <li><a class="ui-state-default" href="{{ page.url }}">{{ page.title}} </a></li>
+                            <li>
+                                <span>&nbsp;::&nbsp;</span>
+                            </li>
+                            <li>
+                                <a class="ui-state-default" href="{{ page.url }}">{{ page.title}} </a>
+                            </li>
                             {% endif %}
                         </ul>
                     </div>
@@ -64,32 +77,40 @@
                 </div>
                 <div class="span-5 last">
                     <div class="span-5 last">
-                        &nbsp;</div>
+                        &nbsp;
+                    </div>
                     <div class="span-5 last">
                         <div class="span-5 last hideifnoscript" id="themeswitcher">
-                            Change jQuery UI Theme</div>
+                            Change jQuery UI Theme
+                        </div>
                         <div class="span-5 last">
                             <div id="switcher">
                             </div>
                         </div>
                     </div>
                     <div class="span-5 last">
-                        &nbsp;</div>
+                        &nbsp;
+                    </div>
                     <div id="GithubBadge" class="span-5 last">
                         <span class="hideifnoscript">Loading GitHub Badge..</span>
-                            <noscript>
-                            <div class="notice span-4 append-1 last">Enabling javascript would make this page rock!</div></noscript>
+                        <noscript>
+                            <div class="notice span-4 append-1 last">
+                                Enabling javascript would make this page rock!
+                            </div>
+                        </noscript>
                     </div>
                 </div>
             </div>
         </div>
         <div class="span-24 last ui-widget-header ui-corner-bottom">
             <div class="span-24 last">
-                &nbsp;</div>
+                &nbsp;
+            </div>
             <div class="span-24 last">
                 <div class="span-24 last">
                     <div class="span-5">
-                        &nbsp;</div>
+                        &nbsp;
+                    </div>
                     <div class="span-18 last">
                         <div class="span-3 centered">
                             Blog
@@ -104,75 +125,89 @@
                 </div>
                 <div class="span-24 last">
                     <div class="span-5">
-                        &nbsp;</div>
+                        &nbsp;
+                    </div>
                     <div class="span-18 last">
                         <div class="span-3 centered">
-                            <a href="http://erikzaadi.blogspot.com">
-                                <img alt='Blog' src="/images/blog.JPG" class="centered" title='Blog' />
-                            </a>
+                            <a href="http://erikzaadi.blogspot.com"><img alt='Blog' src="/images/blog.JPG" class="centered" title='Blog' /></a>
                         </div>
                         <div class='span-7 centered'>
-                            <a href='http://erikzaadi.github.com/atom.xml' rel="alternate" title="Suscribe">
-                                <img alt='RSS' src='/images/rss.png' class="centered" title='RSS' />
-                            </a>
+                            <a href='http://erikzaadi.github.com/atom.xml' rel="alternate" title="Suscribe"><img alt='RSS' src='/images/rss.png' class="centered" title='RSS' /></a>
                         </div>
                         <div class='span-4 last centered'>
                             <span href='http://twitter.com/erikzaadi' alt='Twitter' id='Twitter'></span>
-                            <noscript><a title="Follow me on Twitter!" href="http://twitter.com/erikzaadi"><img src="/images/twitter.png" alt="Twitter" /></a></noscript>
+                            <noscript>
+                                <a title="Follow me on Twitter!" href="http://twitter.com/erikzaadi"><img src="/images/twitter.png" alt="Twitter" /></a>
+                            </noscript>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="span-24 last">
-                &nbsp;</div>
+                &nbsp;
+            </div>
         </div>
     </div>
     </div>
-
     {% if site.localmode %}
-    
-    <script type="text/javascript" src="/scripts/jquery.min.js"></script>
-
-    <script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
-
-    {% else %}
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
-
-    {% endif %}
-    <script type="text/javascript" src="/scripts/jquery.themeswitcher.js"></script>
-
-    <script type="text/javascript" src="/scripts/chili/jquery.chili-2.2.js"></script>
-
-    <script type="text/javascript">        ChiliBook.recipeFolder = "http://erikzaadi.github.com/scripts/chili/";
+    <script type="text/javascript" src="/scripts/jquery.min.js">
     </script>
-
-    <script type="text/javascript" src="/scripts/jquery.tooltip.min.js"></script>
-
-    <script type="text/javascript" src="/jQueryPlugins/scripts/jquery.GitHubBadge.min.js"></script>
-
-    <script type="text/javascript" src="/scripts/main.js"></script>
-
-	{% for var script in page.scripts %}
-	 <script type="text/javascript" src="{{script.src}}"></script>
-	{% endfor %}
-
+    <script type="text/javascript" src="/scripts/jquery-ui.min.js">
+    </script>
+    {% else %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js">
+    </script>
+    {% endif %}
+    <script type="text/javascript" src="/scripts/jquery.themeswitcher.js">
+    </script>
+    <script type="text/javascript" src="/scripts/chili/jquery.chili-2.2.js">
+    </script>
+    <script type="text/javascript">
+        ChiliBook.recipeFolder = "http://erikzaadi.github.com/scripts/chili/";
+    </script>
+    <script type="text/javascript" src="/scripts/jquery.tooltip.min.js">
+    </script>
+    <script type="text/javascript" src="/jQueryPlugins/scripts/jquery.GitHubBadge.min.js">
+    </script>
+    <script type="text/javascript" src="/scripts/main.js">
+    </script>
+    {% for var script in page.scripts %}
+    <script type="text/javascript" src="{{script.src}}">
+    </script>
+    {% endfor %}
     {% if page.docReady %}
-
-    <script type="text/javascript">        {{ page.docReady }} </script>
-
+    <script type="text/javascript">
+        {
+            {
+                page.docReady
+            }
+        }
+    </script>
     {% endif %}
     {% if site.usegoogleanalytics %}
-    <script type="text/javascript">        var gaJsHost = (("https:" == document.location.protocol)
-    ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost
-    + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); </script>
-
-    <script type="text/javascript">        try {
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost +
+        "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
             var pageTracker = _gat._getTracker("UA-8728177-2");
             pageTracker._trackPageview();
-        } catch (err) { }</script>
+        } 
+        catch (err) {
+        }
+    </script>
     {% endif %}
-<noscript><style type="text/css">.hideifnoscript { display:none }</style></noscript>
+    <noscript>
+        <style type="text/css">
+            
+            .hideifnoscript {
+                display: none
+            }
+        </style>
+    </noscript>
 </body>
 </html>
