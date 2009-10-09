@@ -57,6 +57,7 @@ link: /jQueryPlugins/jQuery.printElement
                 <em>Sets wether the plugins behavior is to open a popup of the element to print before
                     printing, or to create a hidden iframe.
                     Possible values: 'iframe' | 'popup'</em>
+									<div class="notice">The only mode currently available in Chrome and Opera is popup mode</div>
             </dt>
         </dl>
     </div>
@@ -94,7 +95,7 @@ link: /jQueryPlugins/jQuery.printElement
         <dl>
             <dt>
                 <strong class="optionTitle">Type:</strong>
-                <span>Array</span>
+                <span>Array of Strings | Array of $.fn.printElement.cssElement | Boolean</span>
             </dt>
             <dt>
                 <strong class="optionTitle">Default:</strong>
@@ -102,7 +103,12 @@ link: /jQueryPlugins/jQuery.printElement
             </dt>
             <dt>
                 <strong class="optionTitle">Description:</strong>
-                <em>array of paths to alternate css files (optimized for print)</em>
+                <em>Can be one of the following 3 options:
+				<br/>
+          1 : boolean (pass true for stripping all css linked)
+         	<br/> 2 : array of $.fn.printElement.cssElement (s)
+         	<br/> 3 : array of strings with paths to alternate css files (optimized for print)
+         </em>
             </dt>
         </dl>
     </div>
@@ -111,7 +117,9 @@ link: /jQueryPlugins/jQuery.printElement
         <div id="pygments">
             {% highlight js %}$("selector").printElement(
             {
-            overrideElementCSS:['thisWillBeTheCSSUsed.css','thisWillBeTheCSSUsedAsWell.css']
+            overrideElementCSS:[
+		'thisWillBeTheCSSUsed.css',
+		{ href:'thisWillBeTheCSSUsedAsWell.css',media:'print'}]
             });{% endhighlight %}
         </div>
     </div>
@@ -129,10 +137,9 @@ link: /jQueryPlugins/jQuery.printElement
             <dt>
                 <strong class="optionTitle">Description:</strong>
                 <em>Contains:
-                    &lt;br/&gt;
-                    &lt;strong&gt;styleToAdd : &lt;/strong&gt;style attributes to add to the body of print document
-                    &lt;br/&gt;
-                    &lt;strong&gt;classNameToAdd : css class to add to the body of print document&lt;/strong&gt;</em>
+                    <br/>
+                    &nbsp;<strong>styleToAdd : </strong>style attributes to add to the body of print document <br/>
+                    &nbsp;<strong>classNameToAdd :  </strong>css class to add to the body of print document</em>
             </dt>
         </dl>
     </div>
@@ -163,6 +170,7 @@ link: /jQueryPlugins/jQuery.printElement
             <dt>
                 <strong class="optionTitle">Description:</strong>
                 <em>in case of popup, determines if the print page will remain open or not</em>
+				<div class="notice">In Opera, this will be left open by default</div>
             </dt>
         </dl>
     </div>
@@ -185,15 +193,14 @@ link: /jQueryPlugins/jQuery.printElement
             </dt>
             <dt>
                 <strong class="optionTitle">Default:</strong>
-                <em>{styleToAdd: 'position:absolute;width:0px;height:0px;',classNameToAdd: ''}</em>
+                <em><strong>styleToAdd : </strong>border:none;position:absolute;width:0px;height:0px;bottom:0px;left:0px;}</em>
             </dt>
             <dt>
                 <strong class="optionTitle">Description:</strong>
                 <em>Contains:
-                    &lt;br/&gt;
-                    &lt;strong&gt;styleToAdd : &lt;/strong&gt;style attributes to add to the iframe element
-                    &lt;br/&gt;
-                    &lt;strong&gt;classNameToAdd : css class to add to the iframe element&lt;/strong&gt;</em>
+                    <br/>
+                    &nbsp;<strong>styleToAdd : </strong>style attributes to add to the iframe element
+                    <br/> &nbsp;<strong>classNameToAdd : </strong> css class to add to the iframe element</em>
             </dt>
         </dl>
     </div>

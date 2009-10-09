@@ -148,7 +148,6 @@
             </div>
         </div>
     </div>
-    </div>
     {% if site.localmode %}
     <script type="text/javascript" src="/scripts/jquery.min.js">
     </script>
@@ -179,11 +178,7 @@
     {% endfor %}
     {% if page.docReady %}
     <script type="text/javascript">
-        {
-            {
-                page.docReady
-            }
-        }
+      {{ page.docReady }}
     </script>
     {% endif %}
     {% if site.usegoogleanalytics %}

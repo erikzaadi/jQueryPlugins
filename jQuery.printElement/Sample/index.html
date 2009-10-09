@@ -1,6 +1,6 @@
 --- 
 layout: default 
-title: jQuery Print Element 0.9 Sample Page 
+title: jQuery Print Element 1.0 Sample Page 
 areaname: jQuery Plugins / jQuery Print Element 
 arealink: /jQueryPlugins/jQuery.printElement/
 link: /jQueryPlugins/jQuery.printElement/Sample
@@ -18,6 +18,12 @@ docReady: |
             $("#PopupandLeaveopen").click(function() {
                 printElem({ leaveOpen: true, printMode: 'popup' });
             });
+            $("#stripCSS").click(function() {
+                printElem({ overrideElementCSS: true });
+            });
+            $("#externalCSS").click(function() {
+                printElem({ overrideElementCSS: ['http://assets3.github.com/stylesheets/bundle.css?180c214baeba2d8a1194e7b48ea7581cfee3e505'] });
+            });
         });
     function printElem(options){
         $('#toPrint').printElement(options);
@@ -25,13 +31,80 @@ docReady: |
 scripts :
  - src : /scripts/jquery.printElement.js
 ---
-   
+
 <div class="span-17 last">
-    <input type="button" value="Default" id="simplePrint" />
-    <input type="button" value="Popup" id="PrintinPopup" />
-    <input type="button" value="Change Title" id="ChangeTitle" />
-    <input type="button" value="Popup and Leave open" id="PopupandLeaveopen" />
-    <hr />
+    <style type="text/css">
+        .labelSpan {
+            float: left;
+            display: block;
+            width: 160px !important;
+            font-weight: bold;
+        }
+        
+        .contentDiv {
+            display: inline;
+        }
+        
+        .item {
+            float: none;
+            clear: both;
+            display: block;
+        }
+    </style>
+    <input type="button" value="Default" id="simplePrint" /><input type="button" value="Popup" id="PrintinPopup" /><input type="button" value="Change Title" id="ChangeTitle" /><input type="button" value="Popup and Leave open" id="PopupandLeaveopen" /><input type="button" value="Strip CSS" id="stripCSS" /><input type="button" value="External CSS" id="externalCSS"/><hr/>
     <div id="toPrint">
-        hmm , need some more printable samples here</div>
+        <h2>Here's a sample of an element to print!</h2>
+        <div class="notice">
+            Notice!
+        </div>
+        <div>
+            <form>
+                <fieldset>
+                    <legend>
+                       &nbsp;Form inputs test&nbsp;
+                    </legend>
+                    <div class="item">
+                        <span class="labelSpan">Radio Test </span>
+                        <div class="contentDiv">
+                            <input type="radio" name="radio1" value="1" /><input type="radio" name="radio1" value="2">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="labelSpan">Select Test </span>
+                        <div class="contentDiv">
+                            <select name="asdsdad">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="labelSpan">
+                            Check Box Test 
+                        </span>
+                        <div class="contentDiv">
+                            <input type="checkbox" name="check1" value="1"/><input type="checkbox" value="2"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="labelSpan">
+                        Text Input Test 
+                        </span>
+                        <div class="contentDiv">
+                            <input type="text" name="TextTest" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="labelSpan">Text Area Test </span>
+                        <div class="contentDiv">
+                            <textarea name="texareatest">
+                            </textarea>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </div>
