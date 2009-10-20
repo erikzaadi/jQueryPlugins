@@ -1,31 +1,220 @@
 --- 
 layout: default  
-title: jQuery Print Element 0.9 
+title: jQuery Print Element 1.0 
 areaname: jQuery Plugins  
 arealink: /jQueryPlugins 
 link: /jQueryPlugins/jQuery.printElement 
 ---
+<style type="text/css">
+    
+    .optionTitle {
+        width: 95px;
+    }
+</style>
 <div class="span-17 last">
-    <h2>jQuery Print Element 0.9 </h2>
+    <h2>{{ page.title }} </h2>
     <h4><a href="Sample/">Sample</a></h4>
     <h4><a href="/jQueryPlugins/scripts/jquery.printElement.js">Download</a></h4>
     <h4><a href="/jQueryPlugins/scripts/jquery.printElement.min.js">Download (Minified)</a></h4>
     <div>
         Copyright (c) 2009 Erik Zaadi
     </div>
-    <div>
+    <p>
         Inspired by <a href="http://plugins.jquery.com/project/PrintArea">PrintArea</a>
         and <a href="http://stackoverflow.com/questions/472951/how-do-i-print-an-iframe-from-javascript-in-safari-chrome">this</a>
         stackoverflow comment
-    </div>
-    <div>
-        &nbsp; <a href="http://erikzaadi.github.com/jQueryPlugins/jQuery.printElement " target="_blank">HomePage</a>
-        &nbsp; <a href="http://plugins.jquery.com/project/printElement" target="_blank">jQuery Plugin home page</a>
-        &nbsp; <a href="http://wiki.github.com/erikzaadi/jQueryPlugins/jqueryprintelement" target="_blank">Wiki</a>
-        &nbsp;
-    </div>
-    <div>
+    </p>
+    <p>
+        &nbsp; <a href="http://github.com/erikzaadi/jQueryPlugins/tree/master/jQuery.printElement" target="_blank">Fork (Github Project)</a>
+        &nbsp;|&nbsp; <a href="http://plugins.jquery.com/project/printElement" target="_blank">jQuery Plugin home page</a>
+        &nbsp;|&nbsp; <a href="http://wiki.github.com/erikzaadi/jQueryPlugins/jqueryprintelement" target="_blank">Wiki</a>
+        &nbsp;|&nbsp; <a href="http://github.com/erikzaadi/jQueryPlugins/issues/labels/printElement" target="_blank">Issues (Report bugs)</a>
+    </p>
+    <p>
         Dual licensed under the MIT and GPL licenses: http://www.opensource.org/licenses/mit-license.php
         http://www.gnu.org/licenses/gpl.html
+    </p>
+</div>
+<div class="span-17 last">
+    <h3>Usage:</h3>
+    <div id="pygments">
+        {% highlight js %}$('SelectorToPrint').printElement();{% endhighlight %}
+    </div>
+    <h3>Options:</h3>
+    <div>
+        <h3>printMode</h3>
+        <dl>
+            <dt>
+                <strong class="optionTitle">Type:</strong>
+                <span>String</span>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Default:</strong>
+                <em>'iframe'</em>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Description:</strong>
+                <em>Sets wether the plugins behavior is to open a popup of the element to print before
+                    printing, or to create a hidden iframe.
+                    Possible values: 'iframe' | 'popup'</em>
+									<div class="notice">The only mode currently available in Chrome and Opera is popup mode</div>
+            </dt>
+        </dl>
+    </div>
+    <div>
+        <h4>Example</h4>
+        <div id="pygments">
+            {% highlight js %}$("selector").printElement({printMode:'popup'});{% endhighlight %}
+        </div>
+    </div>
+    <div>
+        <h3>pageTitle</h3>
+        <dl>
+            <dt>
+                <strong class="optionTitle">Type:</strong>
+                <span>String</span>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Default:</strong>
+                <em>''</em>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Description:</strong>
+                <em>Print Page Title (name of the file sent to the printer)</em>
+            </dt>
+        </dl>
+    </div>
+    <div>
+        <h4>Example</h4>
+        <div id="pygments">
+            {% highlight js %}$("selector").printElement({pageTitle:'thisWillBeTheNameInThePrintersLog.html'});{% endhighlight %}
+        </div>
+    </div>
+    <div>
+        <h3>overrideElementCSS</h3>
+        <dl>
+            <dt>
+                <strong class="optionTitle">Type:</strong>
+                <span>Array of Strings | Array of $.fn.printElement.cssElement | Boolean</span>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Default:</strong>
+                <em>null</em>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Description:</strong>
+                <em>Can be one of the following 3 options:
+				<br/>
+          1 : boolean (pass true for stripping all css linked)
+         	<br/> 2 : array of $.fn.printElement.cssElement (s)
+         	<br/> 3 : array of strings with paths to alternate css files (optimized for print)
+         </em>
+            </dt>
+        </dl>
+    </div>
+    <div>
+        <h4>Example</h4>
+        <div id="pygments">
+            {% highlight js %}$("selector").printElement(
+            {
+            overrideElementCSS:[
+		'thisWillBeTheCSSUsed.css',
+		{ href:'thisWillBeTheCSSUsedAsWell.css',media:'print'}]
+            });{% endhighlight %}
+        </div>
+    </div>
+    <div>
+        <h3>printBodyOptions</h3>
+        <dl>
+            <dt>
+                <strong class="optionTitle">Type:</strong>
+                <span>Object</span>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Default:</strong>
+                <em>{styleToAdd: 'padding:10px;margin:10px;', classNameToAdd: ''}</em>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Description:</strong>
+                <em>Contains:
+                    <br/>
+                    &nbsp;<strong>styleToAdd : </strong>style attributes to add to the body of print document <br/>
+                    &nbsp;<strong>classNameToAdd :  </strong>css class to add to the body of print document</em>
+            </dt>
+        </dl>
+    </div>
+    <div>
+        <h4>Example</h4>
+        <div id="pygments">
+            {% highlight js %}$("selector").printElement(
+            {
+            printBodyOptions:
+            {
+            styleToAdd:'padding:10px;margin:10px;color:#FFFFFF !important;',
+            classNameToAdd : 'thisWillBeTheClassUsedAsWell'
+            }
+            });{% endhighlight %}
+        </div>
+    </div>
+    <div>
+        <h3>leaveOpen</h3>
+        <dl>
+            <dt>
+                <strong class="optionTitle">Type:</strong>
+                <span>Boolean</span>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Default:</strong>
+                <em>false</em>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Description:</strong>
+                <em>in case of popup, determines if the print page will remain open or not</em>
+				<div class="notice">In Opera, this will be left open by default</div>
+            </dt>
+        </dl>
+    </div>
+    <div>
+        <h4>Example</h4>
+        <div id="pygments">
+            {% highlight js %}$("selector").printElement(
+            {
+            leaveOpen:true,
+            printMode:'popup'
+            });{% endhighlight %}
+        </div>
+    </div>
+    <div>
+        <h3>iframeElementOptions</h3>
+        <dl>
+            <dt>
+                <strong class="optionTitle">Type:</strong>
+                <span>Object</span>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Default:</strong>
+                <em><strong>styleToAdd : </strong>border:none;position:absolute;width:0px;height:0px;bottom:0px;left:0px;}</em>
+            </dt>
+            <dt>
+                <strong class="optionTitle">Description:</strong>
+                <em>Contains:
+                    <br/>
+                    &nbsp;<strong>styleToAdd : </strong>style attributes to add to the iframe element
+                    <br/> &nbsp;<strong>classNameToAdd : </strong> css class to add to the iframe element</em>
+            </dt>
+        </dl>
+    </div>
+    <div>
+        <h4>Example</h4>
+        <div id="pygments">
+            {% highlight js %}$("selector").printElement(
+            {
+            iframeElementOptions:
+            {
+            styleToAdd:'position:absolute;width:0px;height:0px;bottom:0px;',
+            classNameToAdd : 'thisWillBeTheClassUsedAsWell'
+            }
+            });{% endhighlight %}
+        </div>
     </div>
 </div>

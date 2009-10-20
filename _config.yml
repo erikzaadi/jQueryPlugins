@@ -1,3 +1,4 @@
+pygments : true
 #Reset when committing!
 usegoogleanalytics : true
 #Reset when committing!
@@ -15,7 +16,7 @@ plugins:
     description : 'Sends an element to print, either in a popup or a hidden iframe'
     language : 'Javascript'
     platform : 'Web'
-    modified : 28-07-2009
+    modified : 09-10-2009
   - name : 'jQuery.LateLoader'
     link : '/jQuery.LateLoader'
     description : 'Late loading of scripts and CSS files'
