@@ -1,0 +1,6 @@
+jQueryPlugins/
+_site/
+boks/
+.project
+.tmp_*
+.DS_Store
