@@ -6,11 +6,37 @@ arealink: /jQueryPlugins/jQuery.Console/
 link: /jQueryPlugins/jQuery.Console/Sample
 docReady: |
     $(document).ready(function() {
-            
+            $("#testCustomSelector").click(function(){
+                var selector = $("#selector").val();
+                var $selection = $(selector);
+                if ($selection.length)
+                    $selection.Console();
+                else
+                    $("<div>'" + selector + "' selector did not match any elements..</div>").dialog({ 
+                        modal :true,
+                        buttons : {
+                        'OK': function(){
+                            $(this).dialog('destroy').remove();
+                            }}
+                        });
+            });
+            $("#testCustomData").click(function(){
+                $.Console.Info('message',['dsad','dasdas'],{orJSON:'312'});
+            });
         });
 scripts :
  - src : /scripts/jQuery.Console.min.js
 ---
 <div>
-	<div class="notice span-7 last">Working on getting this up..</div>
+    <div>
+        <label>
+            Enter a jQuery Selector </label> <input type="text" id="selector" value="Enter your selector" />
+        <input type="button" class="ui-state-default" id="testCustomSelector" value="Test" />
+    </div>
+    <div>
+        <label>
+            Custom Logging sample
+        </label>
+        <input type="button" class="ui-state-default" id="testCustomData" value="Test" />
+    </div>
 </div>
