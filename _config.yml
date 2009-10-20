@@ -4,26 +4,33 @@ usegoogleanalytics : true
 #Reset when committing!
 localmode : false
 plugins: 
-  - name : 'jQuery.GitHubBadge'
+  - name : 'jQuery GitHubBadge'
     link : '/jQuery.GitHubBadge'
     description : 'Adds a badge listing your GitHub account public repositories'
     language : 'Javascript'
     platform : 'Web'
     modified : 03-05-2009
     created : 03-05-2009
-  - name : 'jQuery.printElement'
+  - name : 'jQuery printElement'
     link : '/jQuery.printElement'
     description : 'Sends an element to print, either in a popup or a hidden iframe'
     language : 'Javascript'
     platform : 'Web'
-    modified : 09-10-2009
-  - name : 'jQuery.LateLoader'
+    modified : 28-07-2009
+  - name : 'jQuery LateLoader'
     link : '/jQuery.LateLoader'
     description : 'Late loading of scripts and CSS files'
     language : 'Javascript'
     platform : 'Web'
     modified : 16-07-2009
     created : 16-07-2009
+  - name : 'jQuery Console'
+    link : '/jQuery.Console'
+    description : 'Cross Browser wrapper for logging to console'
+    language : 'Javascript'
+    platform : 'Web'
+    modified : 20-10-2009
+    created : 03-10-2009
 #placeholder
 templateforprojects:
   - name : 'jQuery Plugins1'

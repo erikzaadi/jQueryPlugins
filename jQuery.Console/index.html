@@ -1,0 +1,65 @@
+--- 
+layout: default  
+title: jQuery Console
+areaname: jQuery Plugins  
+arealink: /jQueryPlugins 
+link: /jQueryPlugins/jQuery.Console 
+---
+<div class="span-17 last">
+    <h2>jQuery Console </h2>
+    <h4><a href="Sample/">Sample</a></h4>
+    <h4><a href="/jQueryPlugins/scripts/jQuery.Console.js">Download</a></h4>
+    <h4><a href="/jQueryPlugins/scripts/jQuery.Console.min.js">Download (Minified)</a></h4>
+    <div>
+        Copyright (c) 2009 Erik Zaadi
+    </div>
+    <div>&nbsp;</div>
+	
+	<h3>Cross Browser wrapper for logging to console</h3>
+	<div>
+        &nbsp; <a href="http://erikzaadi.github.com/jQueryPlugins/jQuery.Console " target="_blank">HomePage</a>
+       <!-- Not uploaded yet.. Are you peeking at my source? :D &nbsp; <a href="http://plugins.jquery.com/project/jQuery.Console" target="_blank">jQuery Plugin home page</a>-->
+            &nbsp; <a href="http://github.com/erikzaadi/jQueryPlugins/tree/master" target="_blank">Fork the Project</a>
+			    &nbsp; 
+    </div>
+    <div>
+        Dual licensed under the MIT and GPL licenses: http://www.opensource.org/licenses/mit-license.php
+        http://www.gnu.org/licenses/gpl.html
+    </div>
+    <div>
+		<h4>Usage</h4>
+	</div>
+	<div id="pygments">
+		{% highlight js %}
+
+$.Console.FunctionName
+/* 
+	$.Console.functions holds the Function Names 
+	(see http://getfirebug.com/console.html for more details on each function)
+      Log
+	  Trace
+	  Debug
+	  Info
+	  Warn
+	  Error
+	  Dir
+	  DirXML
+	  Group
+	  GroupCollapsed
+	  GroupEnd
+	  Time
+	  TimeEnd
+	  Profile
+	  ProfileEnd
+	  Count
+*/
+
+//E.g.
+$.Console.Log('message',[ArrayObj:'dsad'],{orJSON:'312'});
+
+//Sends each selected element to the console
+$('selector').Console($.Console.functions.Info) 
+
+{% endhighlight %}
+	</div>
+</div>
