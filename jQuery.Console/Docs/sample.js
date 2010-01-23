@@ -17,3 +17,7 @@ function InitConsoleSample(){
 		$.Console.Info('message',['dsad','dasdas'],{orJSON:'312'});
 	});
 }
+
+$(document).ready(function(){
+InitConsoleSample();
+});
