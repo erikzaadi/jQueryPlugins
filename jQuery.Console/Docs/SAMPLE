@@ -1,1 +1,1 @@
-{"Includes":[{Name:"Sample":"URL:"Docs/sample.html","ContentType":"text/html","IsBinary":false},{Name:"MinScriptInclude":"URL:"Docs/jQuery.Console.min.js","ContentType":"text/javascript","IsBinary":false}]}
+{"Includes":[{"Name":"Sample":"URL:"Docs/sample.html","ContentType":"text/html","IsBinary":false},{"Name":"MinScriptInclude":"URL:"Docs/jQuery.Console.min.js","ContentType":"text/javascript","IsBinary":false}]}
