@@ -4,3 +4,4 @@ boks/
 .project
 .tmp_*
 .DS_Store
+.idea
