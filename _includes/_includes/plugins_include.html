@@ -1,6 +1,6 @@
-{% if site.plugins.size > 0 %}
+{% if site.pluginsArray.size > 0 %}
     <div class="accordionme">
-        {% for plugin in site.plugins %}
+        {% for plugin in site.pluginsArray %}
 	        {% include plugin_include.html %}
         {% endfor %}
     </div>
@@ -9,7 +9,7 @@
     <div>&nbsp;</div>
     {% else %}    
     <div>
-        <a href="/plugins.html" alt="All Plugins">All plugins ({{ site.plugins.size }})</a>
+        <a href="/plugins.html" alt="All Plugins">All plugins ({{ site.pluginsArray.size }})</a>
     </div>
     {% endif %}
 {% else %}

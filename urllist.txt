@@ -4,5 +4,5 @@ layout: nil
 http://projects.erikzaadi.com/jQueryPlugins/
 http://projects.erikzaadi.com/jQueryPlugins/posts.html
 http://projects.erikzaadi.com/jQueryPlugins/plugins.html{% for post in site.posts %}
-http://projects.erikzaadi.com/jQueryPlugins/{{ post.url }}{% endfor %}{% for plugin in site.plugins %}
+http://projects.erikzaadi.com/jQueryPlugins/{{ post.url }}{% endfor %}{% for plugin in site.pluginsArray %}
 http://projects.erikzaadi.com/jQueryPlugins/{{ plugin.link }}{% endfor %}

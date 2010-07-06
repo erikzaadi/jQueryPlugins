@@ -13,7 +13,7 @@ layout: nil
         <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
-    </url>{% endfor %}{% for plugin in site.plugins %}
+    </url>{% endfor %}{% for plugin in site.pluginsArray %}
     <url>
         <loc>http://projects.erikzaadi.com/jQueryPlugins{{ plugin.link }}</loc>
         <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>

@@ -3,7 +3,7 @@ pygments : true
 usegoogleanalytics : true
 #Reset when committing!
 localmode : false
-plugins: 
+pluginsArray: 
   - name : 'jQuery GitHubBadge'
     link : '/jQuery.GitHubBadge'
     description : 'Adds a badge listing your GitHub account public repositories'
