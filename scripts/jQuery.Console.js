@@ -3,7 +3,7 @@
  *
  *  Copyright (c) 2009 Erik Zaadi
  *
- *  Home Page : http://erikzaadi.github.com/jQueryPlugins/jQuery.Console
+ *  Home Page : http://projects.erikzaadi.com/jQueryPlugins/jQuery.Console
  *  jQuery Plugin home page : http://plugins.jquery.com/project/Console
  *
  * Dual licensed under the MIT and GPL licenses:

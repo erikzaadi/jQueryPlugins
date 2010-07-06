@@ -5,10 +5,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Erik Zaadi @ GitHub</title>
- <link href="http://erikzaadi.github.com/atom.xml" rel="self"/>
- <link href="http://erikzaadi.github.com/"/>
+ <link href="http://projects.erikzaadi.com/atom.xml" rel="self"/>
+ <link href="http://projects.erikzaadi.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>erikzaadi.github.com</id>
+ <id>projects.erikzaadi.com</id>
  <author>
    <name>Erik Zaadi</name>
  </author>
@@ -16,9 +16,9 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title | xml_escape }}</title>
-   <link href="http://erikzaadi.github.com{{ post.url }}"/>
+   <link href="http://projects.erikzaadi.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://erikzaadi.github.com{{ post.id }}</id>
+   <id>http://projects.erikzaadi.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

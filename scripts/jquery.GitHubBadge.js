@@ -6,7 +6,7 @@
 *  Inspired by http://drnicjavascript.rubyforge.org/github_badge and
 *   http://mattn.github.com/jquery-github-badge/
 *
-*  Home Page : http://erikzaadi.github.com/jQueryPlugins/jQuery.GitHubBadge
+*  Home Page : http://projects.erikzaadi.com/jQueryPlugins/jQuery.GitHubBadge
 *  jQuery Plugin home page : http://plugins.jquery.com/project/GitHubBadge
 *  Wiki : http://wiki.github.com/erikzaadi/jQueryPlugins/jquerygithubbadge
 * 

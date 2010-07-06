@@ -1,4 +1,4 @@
-<html>
+﻿<html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>{{ page.title }}</title>
@@ -8,17 +8,15 @@
         <meta name="rating" content="general" />
         <meta name="robots" content="all" />
         <meta name="MSSmartTagsPreventParsing" content="true" />
-        <link href="http://erikzaadi.github.com/atom.xml" rel="alternate" title="Erik Zaadi @ Github" type="application/atom+xml" />
+        <link href="http://projects.erikzaadi.com/atom.xml" rel="alternate" title="Erik Zaadi @ Github" type="application/atom+xml" />
         {% if site.localmode %}
         <link media="all" rel="stylesheet" type="text/css" href="/css/jquery-ui.css" />
         {% else %} 
-        <link media="all" rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/dark-hive/jquery-ui.css" />
+        <link media="all" rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/dark-hive/jquery-ui.css" />
         {% endif %}
-        <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-        <link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
+        <link rel="stylesheet" href="/css/blueprint.css" type="text/css" media="all" />
         <link rel="stylesheet" href="/css/main.css" type="text/css" media="all" />
-        <!--[if IE]><link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen, projection"/><![endif]-->
-        <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="all" />
+        <!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen, projection"/><![endif]-->
     </head>
     <body>
     <div class="container ui-widget-content">
@@ -90,15 +88,7 @@
                     </div>
                     <div class="span-5 last">
                         &nbsp;
-                    </div>
-                    <div id="GithubBadge" class="span-5 last">
-                        <span class="hideifnoscript">Loading GitHub Badge..</span>
-                        <noscript>
-                            <div class="notice span-4 append-1 last">
-                                Enabling javascript would make this page rock!
-                            </div>
-                        </noscript>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -129,10 +119,10 @@
                     </div>
                     <div class="span-18 last">
                         <div class="span-3 centered">
-                            <a href="http://erikzaadi.blogspot.com"><img alt='Blog' src="/images/blog.JPG" class="centered" title='Blog' /></a>
+                            <a href="http://erikzaadi.com"><img alt='Blog' src="/images/blog.JPG" class="centered" title='Blog' /></a>
                         </div>
                         <div class='span-7 centered'>
-                            <a href='http://erikzaadi.github.com/atom.xml' rel="alternate" title="Suscribe"><img alt='RSS' src='/images/rss.png' class="centered" title='RSS' /></a>
+                            <a href='http://projects.erikzaadi.com/atom.xml' rel="alternate" title="Suscribe"><img alt='RSS' src='/images/rss.png' class="centered" title='RSS' /></a>
                         </div>
                         <div class='span-4 last centered'>
                             <span href='http://twitter.com/erikzaadi' alt='Twitter' id='Twitter'></span>
@@ -148,27 +138,13 @@
             </div>
         </div>
     </div>
-    {% if site.localmode %}
-    <script type="text/javascript" src="/scripts/jquery.min.js">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
     </script>
-    <script type="text/javascript" src="/scripts/jquery-ui.min.js">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js">
     </script>
-    {% else %}
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
-    </script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js">
-    </script>
-    {% endif %}
     <script type="text/javascript" src="/scripts/jquery.themeswitcher.js">
     </script>
-    <script type="text/javascript" src="/scripts/chili/jquery.chili-2.2.js">
-    </script>
-    <script type="text/javascript">
-        ChiliBook.recipeFolder = "http://erikzaadi.github.com/scripts/chili/";
-    </script>
     <script type="text/javascript" src="/scripts/jquery.tooltip.min.js">
-    </script>
-    <script type="text/javascript" src="/jQueryPlugins/scripts/jquery.GitHubBadge.min.js">
     </script>
     <script type="text/javascript" src="/scripts/main.js">
     </script>
@@ -178,7 +154,7 @@
     {% endfor %}
     {% if page.docReady %}
     <script type="text/javascript">
-      {{ page.docReady }}
+       {{ page.docReady }}
     </script>
     {% endif %}
     {% if site.usegoogleanalytics %}
@@ -196,9 +172,9 @@
         }
     </script>
 	<noscript> 
-	    <img src="http://www.google-analytics.com/__utm.gif?utmwv=1&utmn=633372029&utmsr=-&utmsc=-&utmul=-&utmje=0&utmfl=-&utmdt=-&utmhn=erikzaadi.github.com&utmr=&utmp={{ post.url }}{{ page.link }}[noscript]&utmac=UA-8728177-2&utmcc=__utma%3D633372029.1680039647.1256046866.1256046866.1256046866.2%3B%2B__utmb%3D633372029%3B%2B__utmc%3D633372029%3B%2B__utmz%3D633372029.12560468662.2.utmccn%3D(direct)%7Cutmcsr%3D(direct)%7Cutmcmd%3D(none)%3B%2B__utmv%3D633372029.%3B" alt="GA" style="display: none;" /> 
+	    <img src="http://www.google-analytics.com/__utm.gif?utmwv=1&utmn=633372029&utmsr=-&utmsc=-&utmul=-&utmje=0&utmfl=-&utmdt=-&utmhn=projects.erikzaadi.com&utmr=&utmp={{ post.url }}{{ page.link }}[noscript]&utmac=UA-8728177-2&utmcc=__utma%3D633372029.1680039647.1256046866.1256046866.1256046866.2%3B%2B__utmb%3D633372029%3B%2B__utmc%3D633372029%3B%2B__utmz%3D633372029.12560468662.2.utmccn%3D(direct)%7Cutmcsr%3D(direct)%7Cutmcmd%3D(none)%3B%2B__utmv%3D633372029.%3B" alt="GA" style="display: none;" /> 
 	</noscript> 
-    {% endif %}
+   {% endif %}
     <noscript>
         <style type="text/css">
             

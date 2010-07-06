@@ -1,8 +1,8 @@
 ---
 layout: nil
 ---
-http://erikzaadi.github.com/jQueryPlugins/
-http://erikzaadi.github.com/jQueryPlugins/posts.html
-http://erikzaadi.github.com/jQueryPlugins/plugins.html{% for post in site.posts %}
-http://erikzaadi.github.com/jQueryPlugins/{{ post.url }}{% endfor %}{% for plugin in site.plugins %}
-http://erikzaadi.github.com/jQueryPlugins/{{ plugin.link }}{% endfor %}
+http://projects.erikzaadi.com/jQueryPlugins/
+http://projects.erikzaadi.com/jQueryPlugins/posts.html
+http://projects.erikzaadi.com/jQueryPlugins/plugins.html{% for post in site.posts %}
+http://projects.erikzaadi.com/jQueryPlugins/{{ post.url }}{% endfor %}{% for plugin in site.plugins %}
+http://projects.erikzaadi.com/jQueryPlugins/{{ plugin.link }}{% endfor %}

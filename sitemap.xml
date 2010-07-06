@@ -9,25 +9,25 @@ layout: nil
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     {% for post in site.posts %}
     <url>
-        <loc>http://erikzaadi.github.com/jQueryPlugins{{ post.url }}</loc>
+        <loc>http://projects.erikzaadi.com/jQueryPlugins{{ post.url }}</loc>
         <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
     </url>{% endfor %}{% for plugin in site.plugins %}
     <url>
-        <loc>http://erikzaadi.github.com/jQueryPlugins{{ plugin.link }}</loc>
+        <loc>http://projects.erikzaadi.com/jQueryPlugins{{ plugin.link }}</loc>
         <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
     </url>{% endfor %}
     <url>
-        <loc>http://erikzaadi.github.com/jQueryPlugins/posts.html</loc>
+        <loc>http://projects.erikzaadi.com/jQueryPlugins/posts.html</loc>
         <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>http://erikzaadi.github.com/jQueryPlugins/projects.html</loc>
+        <loc>http://projects.erikzaadi.com/jQueryPlugins/projects.html</loc>
         <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
