@@ -1,6 +1,6 @@
 /// <reference path="http://code.jquery.com/jquery-1.4.1-vsdoc.js" />
 /*
-* Print Element Plugin 1.1a
+* Print Element Plugin 1.2
 *
 * Copyright (c) 2010 Erik Zaadi
 *
