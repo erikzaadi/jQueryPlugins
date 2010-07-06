@@ -141,7 +141,7 @@
     }
 
     function _getBaseHref() {
-        var port = (window.location.port) ? ':' + +window.location.port : '';
+        var port = (window.location.port) ? ':' + window.location.port : '';
         return window.location.protocol + '//' + window.location.hostname + port + window.location.pathname;
     }
 
