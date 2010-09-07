@@ -47,7 +47,7 @@
                             <li>
                                 <a class="ui-state-default" href="{{ page.link }}">{{ page.title}} </a>
                             </li>
-                            {% endif %} {% if page.url %}
+                            {% else %} {% if page.url %}
                             <li>
                                 <span>&nbsp;::&nbsp;</span>
                             </li>
@@ -55,6 +55,7 @@
                                 <a class="ui-state-default" href="{{ page.url }}">{{ page.title}} </a>
                             </li>
                             {% endif %}
+							{% endif %}
                         </ul>
                     </div>
                     <div class="span-19 last">
