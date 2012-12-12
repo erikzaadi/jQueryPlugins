@@ -150,6 +150,19 @@
         var elementHtml = _getElementHTMLIncludingFormElements(element);
 
         var html = new Array();
+
+        // Copy doctype if it's present
+        if (document.doctype) {
+            var node = document.doctype;
+            html.push(
+                "<!DOCTYPE "
+                + node.name
+                + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '')
+                + (!node.publicId && node.systemId ? ' SYSTEM' : '')
+                + (node.systemId ? ' "' + node.systemId + '"' : '')
+                + '>'
+            );
+        }
         html.push('<html><head><title>' + opts["pageTitle"] + '</title>');
         if (opts["overrideElementCSS"]) {
             if (opts["overrideElementCSS"].length > 0) {
